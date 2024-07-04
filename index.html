@@ -1,0 +1,87 @@
+<html>
+<body>
+<div class="menu">
+<img src="logo.png" alt="" width="270px">
+</div>
+<div class="container">
+<div id="titulo">
+<h3>To Do <br> List <br> </h3>
+<button> <a href="#data"> Data: </a></button>
+<button id="bt1"> <a href="#texto">Crie a sua aqui</a></button>
+</div>
+<h3> Quinta-feira </h3>
+</div>
+
+<div class="parte-lista">
+<div class="container2">
+<h1 class="subtitulo"> Adicionar Elementos na Lista</h1>
+
+<input type="text" class=”nome” placeholder="Seu nome">
+<input type="text" placeholder="Digite uma tarefa">
+<input type="text" class=”nome” placeholder="Digite seu sobrenome" value="debora">
+
+<h3> Data: </h3>
+<button onclick="adicionar()"> + </button>
+<button onclick="remover()"> - </button>
+</div>
+<div id="tarefas">
+</div>
+</div>
+
+<script>
+    //questão 1
+    const h3 = document.getElementsByTagName("h3")[2];
+    h3.style.fontSize = "30px"
+    h3.style.fontFamily = "Ariel";
+
+    //questão 2
+    const h1 = document.getElementsByClassName("subtitulo")[0];
+    h1.innerHTML = "Adicionar Tarefas na Lista";
+
+    const tag = document.getElementsByTagName("h3")[1];
+    tag.innerHTML = "Teste!"
+
+    //questão 3
+    //const input = document.getElementsByTagName("input")[1].value;
+    //const div = document.getElementsByClassName("container2")[0];
+    //div.innerHTML = input;
+
+    //questão 4
+    const p = document.createElement("p");
+    p.innerText = "Débora Braz";
+    document.getElementsByClassName("container")[0].appendChild(p);
+   
+    //questão 5 
+    const botão = document.createElement("button");
+    botão.innerHTML = "Cancelar";
+
+    const dnova = document.createElement("div");
+    dnova.appendChild(botão);
+
+    const tarefas = document.getElementById("tarefas");
+    tarefas.appendChild(dnova);
+
+    //questão 6
+    const btremover = document.getElementsByTagName("button")[3];
+    btremover.addEventListener("click", function(){
+        document.getElementById("tarefas").remove();
+    });
+
+    //questão 7 
+    const img = document.createElement("img");
+    img.src = "pen.jpg";
+    //const bory = document.getElementsByTagName("body")[0];
+    //bory.appendChild(img); 
+    
+    //ou assim que é mais facíl/rapido
+    document.body.appendChild(img);
+
+    //questão 8 
+    const sobrenome = document.getElementsByTagName("input")[2].value;
+    const nome = document.getElementsByTagName("input")[0];
+    nome.value = sobrenome;
+
+</script>
+
+</body>
+</html>
